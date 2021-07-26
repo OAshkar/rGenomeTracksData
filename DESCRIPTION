@@ -1,0 +1,24 @@
+Package: rGenomeTracksData
+Title: Demonstration Data from rGenomeTracks package
+Version: 0.99.0
+Authors@R:
+    person(given = "Omar",
+           family = "Elashkar",
+           role = c("aut", "cre"),
+           email = "omar.i.elashkar@gmail.com",
+           comment = c(ORCID = "0000-0002-5505-778X"))
+Description: rGenomeTracksData is a collection of data from pyGenomeTracks project.
+             The purpose of this data is testing and demonstration of rGenomeTracks.
+             This package include 14 sample file from different genomic and epigenomic file format.
+License: GPL (>= 3)
+Depends: R (>= 4.1.0)
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.1.1
+Suggests:
+    rmarkdown,
+    knitr,
+    testthat (>= 3.0.0)
+Config/testthat/edition: 3
+VignetteBuilder: knitr
+biocViews: AnnotationData, AnnotationHub

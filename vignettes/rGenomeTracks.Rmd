@@ -1,0 +1,59 @@
+---
+title: "rGenomeTracksData"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{rGenomeTracks}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+rGenomeTracksData is a collection of sample genomic and epigenomic data for demonstrating rGenomeTracks package.
+
+## Data Source 
+This data is provided by [pyGenomeTracks](https://github.com/deeptools/pyGenomeTracks) project.
+
+## File types 
+
+| Name                                       | Type                          |
+|--------------------------------------------|-------------------------------|
+| bigwig2_X_2.5e6_3.5e6.bw                   | bigwig                        |
+| dm3_genes.bed.gz"                          | bed12                         |
+| dm3_genes.bed4.gz"                         | bed4                          |
+| dm3_genes.bed6.gz"                         | bed6                          |
+| dm3_subset_BDGP5.78.gtf.gz"                | gtf                           |
+| epilog.qcat.bgz"                           | qcat                          |
+| GSM3182416_E12DHL_WT_Hoxd11vp.bedgraph.gz" | bedGraph                      |
+| HoxD_cluster_regulatory_regions_mm10.bed"  | bed                           |
+| Li_et_al_2015.cool                         | HDF5 compressed sparse (cool) |
+| Li_et_al_2015.h5                           | HDF5                          |
+| links2.links                               | bed links                     |
+| tad_classification.bed                     | bed                           |
+| test.arcs                                  | bed links                     |
+| test2.narrowPeak                           | narrowPeak                    |
+
+```{r setup}
+library(rGenomeTracksData)
+```
+
+
+```{r}
+# List all package
+list.files(system.file("extdata", package = "rGenomeTracksData"))
+
+# locate the file you want for loading from the track
+
+bigwig <- system.file("extdata", package = "rGenomeTracksData", file = "bigwig2_X_2.5e6_3.5e6.bw")
+```
+
+## Session Info 
+
+```{r}
+sessionInfo()
+```
