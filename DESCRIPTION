@@ -1,5 +1,5 @@
 Package: rGenomeTracksData
-Title: Demonstration Data from rGenomeTracks package
+Title: Demonstration Data from rGenomeTracks Package
 Version: 0.99.0
 Authors@R:
     person(given = "Omar",
@@ -21,4 +21,4 @@ Suggests:
     testthat (>= 3.0.0)
 Config/testthat/edition: 3
 VignetteBuilder: knitr
-biocViews: AnnotationData, AnnotationHub
+biocViews: AnnotationData, AnnotationHub, FunctionalAnnotation, Drosophila_melanogaster

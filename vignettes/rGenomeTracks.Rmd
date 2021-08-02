@@ -38,22 +38,37 @@ This data is provided by [pyGenomeTracks](https://github.com/deeptools/pyGenomeT
 | test.arcs                                  | bed links                     |
 | test2.narrowPeak                           | narrowPeak                    |
 
+## Installation and loading of libraries
+```{r install, eval = FALSE}
+if (!requireNamespace("BiocManager", quietly = TRUE))
+    install.packages("BiocManager")
+BiocManager::install("ObMiTi")
+```
+
+
 ```{r setup}
+# loading required libraries
 library(rGenomeTracksData)
+library(AnnotationHub)
 ```
 
-
+## Query AnnotationHub
 ```{r}
-# List all package
-list.files(system.file("extdata", package = "rGenomeTracksData"))
-
-# locate the file you want for loading from the track
-
-bigwig <- system.file("extdata", package = "rGenomeTracksData", file = "bigwig2_X_2.5e6_3.5e6.bw")
+ah <- AnnotationHub()
+query(ah, "rGenomeTracksData")
 ```
+
+## Fetch Data 
+
+After saving the query object, you can access the file you want like that: 
+```{r}
+# locate the file you want for loading from the track
+bigwig_file <-  ah[["AH95891"]]
+```
+The object is a path to the local directory to the downloaded file. 
 
 ## Session Info 
 
-```{r}
+```{r session_info}
 sessionInfo()
 ```
