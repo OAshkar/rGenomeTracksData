@@ -1,10 +1,11 @@
 ---
 title: "rGenomeTracksData"
+author: "Omar Elashkar"
 output: rmarkdown::html_vignette
 vignette: >
-  %\VignetteIndexEntry{rGenomeTracks}
+  %\VignetteIndexEntry{rGenomeTracksData}
   %\VignetteEngine{knitr::rmarkdown}
-  %\VignetteEncoding{UTF-8}
+  \usepackage[utf8]{inputenc}
 ---
 
 ```{r, include = FALSE}

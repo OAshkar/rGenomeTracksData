@@ -11,14 +11,15 @@ Description: rGenomeTracksData is a collection of data from pyGenomeTracks proje
              The purpose of this data is testing and demonstration of rGenomeTracks.
              This package include 14 sample file from different genomic and epigenomic file format.
 License: GPL (>= 3)
-Depends: R (>= 4.1.0)
+Depends: R (>= 4.1),
+         AnnotationHub
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.1.1
 Suggests:
-    rmarkdown,
     knitr,
-    testthat (>= 3.0.0)
-Config/testthat/edition: 3
+    rmarkdown,
+    BiocManager,
+    devtools
 VignetteBuilder: knitr
 biocViews: AnnotationData, AnnotationHub, FunctionalAnnotation, Drosophila_melanogaster
